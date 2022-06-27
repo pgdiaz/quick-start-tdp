@@ -38,12 +38,13 @@ public class Series {
     /*
      * Desarrolle un programa que permita conocer cuántos términos de
      * la serie armónica se necesitan para satisfacer la desigualdad
-     * 1 + ½ + 1/3 + . . . + 1/n > limite.
-     * El valor de limite debe ingresarse desde el teclado.
+     * 1 + ½ + 1/3 + . . . + 1/n > límite.
+     * El valor de límite debe ingresarse desde el teclado.
      */
     public void determinarCantidadTerminos(double limite) {
         int limiteTerminos = 10000;
-        System.out.println(String.format("El limite de términos pre-establecido es %d", limiteTerminos));
+        System.out.println(String.format(
+            "El límite de términos pre-establecido es %d", limiteTerminos));
         double resultado = 0;
         int contador = 0;
         do {
@@ -51,14 +52,14 @@ public class Series {
             resultado += (1d / contador);
         } while (comparar(resultado, limite) <= 0 && contador < limiteTerminos);
         System.out.println(String.format(
-                "Se necesitan %d término(s) de la serie armónica para superar el limite %.2f",
+                "Se necesitan %d término(s) de la serie armónica para superar el límite %.2f",
                 contador,
                 limite));
     }
 
     /*
      * Compara dos valores de tipo double con precisión 2
-     * usando el método de rendondeo ROUND_HALF_EVEN.
+     * usando el método de redondeo ROUND_HALF_EVEN.
      * Retorna -1 si x es menor que y
      * Retorna 0 si x es igual que y
      * Retorna 1 si x es mayor que y
